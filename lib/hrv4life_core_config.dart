@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
 import 'package:hrv4life_core/src/loader/hrv4life_loader.dart';
+import 'package:hrv4life_core/src/theme/hrv4life_thema.dart';
 
 class Hrv4lifeCoreConfig extends StatelessWidget {
   const Hrv4lifeCoreConfig({
@@ -26,11 +27,13 @@ class Hrv4lifeCoreConfig extends StatelessWidget {
         debugMode: kDebugMode,
         bindings: bindings,
         pages: [...pages ?? [], ...pagesBuilders ?? []],
+        modules: modules,
         builder: (context, routes, flutterGetItNavObserver) {
           return AsyncStateBuilder(
             loader:Hrv4lifeLoader(),
             builder: (navigatorObserver) {
             return MaterialApp(
+              theme: Hrv4lifeThema.ligthTheme,
               navigatorObservers: [
                 navigatorObserver,
                 flutterGetItNavObserver,
