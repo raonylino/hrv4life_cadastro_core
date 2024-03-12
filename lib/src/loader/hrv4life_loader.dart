@@ -3,7 +3,7 @@ import 'package:asyncstate/class/async_overlay.dart';
 import 'package:asyncstate/class/async_value.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
-import 'package:signals_flutter/extended.dart';
+
 
 final class Hrv4lifeLoader extends AsyncOverlay{
   Hrv4lifeLoader(): super(
